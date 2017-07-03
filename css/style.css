@@ -1,0 +1,144 @@
+
+/*
+.you can create comments or hide things by hitting command?
+.cascading stylesheet because the lower ones will overwrite the ones above
+*/
+
+/*
+CSS Syntax
+selector {
+	(declaration comes here)
+	properties : values;
+}
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	line-height: 1.4;
+	margin: 0;
+}
+
+/*
+.h1, a all have default stylings but if I select header immediately then I would have overcome the default styling
+.combining two words together like header a only changes the a in header
+*/
+h1, a {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: 300; /*number from 100 to 1000*/
+	text-decoration: none;
+	color: white;
+}
+
+header a:hover {
+	font-weight: bold;
+	border-bottom: 0px solid white;
+}
+
+header {
+	text-align: center;
+	background-color: green;
+	background-image: url(../images/header-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 30px;
+	margin-bottom: 20px;
+}
+
+header ul, footer ul {
+	padding: 0;
+}
+
+.container {
+	background-color: grey;
+	width: 1000px;
+	margin: 0 auto;
+
+}
+
+.recipes {
+	width: 60%;
+	float: left;
+}
+
+article {
+	width: 50%;
+	float: left;
+	padding-right: 20px;
+	padding-bottom: 20px;
+
+}
+
+article img {
+	max-width: 100%;
+}
+
+.sidebar {
+	width: 40%;
+	float: right;
+	background-color: orange;
+	background-image: url(../images/sidebar-bg.png);
+	padding: 20px;
+}
+
+footer {
+	clear: both;
+	background: black;
+	color: white;
+	text-align: center;
+	padding: 30px;
+}
+
+footer li, header li {
+	display: inline;
+	list-style-type: none;
+    padding: 0;
+	margin: 10px;
+}
+
+@media (max-width: 1000px) {
+	.sidebar {
+		clear: both;
+		/*display: none;*/
+		width: 100%;
+	}
+	.recipes, .container {
+		width: 100%;
+		/*padding: 0 20px;*/
+	}
+
+	.recipes {
+		padding-bottom: 50px;
+	}
+
+	article {
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	article img {
+		width: 100%;
+	}
+
+	footer {
+		width: 100%
+	}
+}
+
+@media (max-width: 450px) {
+	.recipes {
+		padding: 0 20px 50px 20px;
+	}
+
+	article {
+		width: 100%;
+		padding: 0;
+	}
+
+	article img {
+		width: 100%;
+	}
+}
